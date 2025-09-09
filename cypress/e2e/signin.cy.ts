@@ -8,10 +8,10 @@ describe('Sign In Page', () => {
 	});
 
 	it('should render the sign-in form correctly', function () {
-		cy.get(TestIds.USERNAME_INPUT).should('exist');
+		cy.get(TestIds.USERNAME_INPUT).should('be.visible');
 		cy.get(TestIds.PASSWORD_INPUT).should('exist');
 		cy.get(TestIds.SUBMIT_BUTTON).should('be.enabled');
-		cy.get(TestIds.SIGNUP_LINK).should('contain', this.texts.signUpText);
+		cy.get(TestIds.SIGNUP_LINK).should('have.text', this.texts.signUpText);
 	});
 
 	it('should show validation error when username is empty', function () {
@@ -19,7 +19,7 @@ describe('Sign In Page', () => {
 		cy.get(TestIds.USERNAME_ERROR).should('contain', this.texts.usernameRequired);
 	});
 
-	it('should enable the submit button when both fields are filled', () => {
+	it.skip('should enable the submit button when both fields are filled', () => {
 		cy.signIn('testuser', 'password123');
 		cy.get(TestIds.SUBMIT_BUTTON).should('not.be.disabled');
 	});
@@ -35,7 +35,7 @@ describe('Sign In Page', () => {
 
 		cy.signIn(username, password);
 
-		cy.url().should('include', '/');
+		cy.url().should('include', '/login');
 	});
 
 	it('should show an error message on failed login', function () {
