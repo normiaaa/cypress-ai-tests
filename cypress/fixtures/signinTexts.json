@@ -1,5 +1,6 @@
 {
 	"usernameRequired": "Username is required",
 	"signUpText": "Don't have an account? Sign Up",
-	"rememberMeCookie": "rememberMe"
+	"rememberMeCookie": "rememberMe",
+	"invalidCredentialsError": "Username or password is invalid"
 }

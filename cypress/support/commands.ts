@@ -31,10 +31,18 @@
 
 // Custom command to sign in
 
-import { TestIds } from '../support/testIds'; // Adjust the import path if necessary
+import { LOGIN_TEST_IDS } from './testIDs/login'; // Adjust the import path if necessary
 
-Cypress.Commands.add('signIn', (username: string, password: string) => {
-	cy.get(TestIds.USERNAME_INPUT).type(username);
-	cy.get(TestIds.PASSWORD_INPUT).type(password);
-	cy.get(TestIds.SUBMIT_BUTTON).click();
+Cypress.Commands.add('getByTestID', (testID: string) => {
+	return cy.get(`[data-test="${testID}"]`);
+});
+
+Cypress.Commands.add('getByName', (testID: string) => {
+	return cy.get(`[name="${testID}"]`);
+});
+
+Cypress.Commands.add('loginViaUI', (username: string, password: string) => {
+	cy.getByName(LOGIN_TEST_IDS.USERNAME_INPUT).type(username);
+	cy.getByName(LOGIN_TEST_IDS.PASSWORD_INPUT).type(password);
+	cy.getByTestID(LOGIN_TEST_IDS.SUBMIT_BUTTON).click();
 });
