@@ -1,0 +1,22 @@
+{
+	"userProfile": {
+		"avatarAlt": "Kristian Bradtke",
+		"fullName": "Kristian B",
+		"username": "@Arvilla_Hegmann",
+		"balance": "$930.26",
+		"accountBalanceLabel": "Account Balance"
+	},
+	"navigation": {
+		"home": "Home",
+		"myAccount": "My Account",
+		"bankAccounts": "Bank Accounts",
+		"notifications": "Notifications",
+		"logout": "Logout"
+	},
+	"hrefs": {
+		"home": "/",
+		"userSettings": "/user/settings",
+		"bankAccounts": "/bankaccounts",
+		"notifications": "/notifications"
+	}
+}

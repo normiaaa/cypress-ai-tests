@@ -37,6 +37,10 @@ Cypress.Commands.add('getByTestID', (testID: string) => {
 	return cy.get(`[data-test="${testID}"]`);
 });
 
+Cypress.Commands.add('getByDataTestID', (testID: string) => {
+	return cy.get(`[data-testid="${testID}"]`);
+});
+
 Cypress.Commands.add('getByName', (testID: string) => {
 	return cy.get(`[name="${testID}"]`);
 });

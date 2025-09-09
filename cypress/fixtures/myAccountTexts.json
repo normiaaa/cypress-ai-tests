@@ -1,0 +1,24 @@
+{
+	"page": {
+		"title": "User Settings"
+	},
+	"form": {
+		"firstName": {
+			"placeholder": "First Name",
+			"value": "Kristian"
+		},
+		"lastName": {
+			"placeholder": "Last Name",
+			"value": "Bradtke"
+		},
+		"email": {
+			"placeholder": "Email",
+			"value": "Skyla.Stamm@yahoo.com"
+		},
+		"phoneNumber": {
+			"placeholder": "Phone Number",
+			"value": "410-786-2112"
+		},
+		"saveButton": "Save"
+	}
+}

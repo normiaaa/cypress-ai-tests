@@ -4,10 +4,16 @@
 declare namespace Cypress {
 	interface Chainable {
 		/**
-		 * Custom command to get element by data-cy test ID.
+		 * Custom command to get element by data-test test ID.
 		 * @example cy.getByTestID('submit-button')
 		 */
 		getByTestID(testID: string): Chainable<JQuery<HTMLElement>>;
+
+		/**
+		 * Custom command to get element by data-testid attribute.
+		 * @example cy.getByDataTestID('PersonIcon')
+		 */
+		getByDataTestID(testID: string): Chainable<JQuery<HTMLElement>>;
 
 		/**
 		 * Custom command to get element by name attribute.

@@ -1,0 +1,25 @@
+{
+	"navigation": {
+		"everyone": "Everyone",
+		"friends": "Friends",
+		"mine": "Mine"
+	},
+	"header": {
+		"newButton": "New",
+		"notificationsCount": "8"
+	},
+	"filters": {
+		"dateRange": "Date: ALL",
+		"amountRange": "Amount: $0 - $1,000"
+	},
+	"transactionList": {
+		"hasContent": "Transaction list contains data"
+	},
+	"hrefs": {
+		"createTransaction": "/transaction/new",
+		"cypressWebsite": "https://cypress.io"
+	},
+	"footer": {
+		"builtBy": "Built by"
+	}
+}
