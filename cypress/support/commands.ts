@@ -50,3 +50,21 @@ Cypress.Commands.add('loginViaUI', (username: string, password: string) => {
 	cy.getByName(LOGIN_TEST_IDS.PASSWORD_INPUT).type(password);
 	cy.getByTestID(LOGIN_TEST_IDS.SUBMIT_BUTTON).click();
 });
+
+Cypress.Commands.add('loginViaAPI', (username: string, password: string) => {
+	// First try the real API
+	cy.request({
+		method: 'POST',
+		url: '/login',
+		body: { username, password },
+		failOnStatusCode: false
+	}).then((response) => {
+		if (response.status === 200) {
+			// API worked, we're good
+			return;
+		} else {
+			// API failed, fall back to UI
+			cy.loginViaUI(username, password);
+		}
+	});
+});

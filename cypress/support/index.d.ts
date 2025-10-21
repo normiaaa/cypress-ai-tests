@@ -22,9 +22,15 @@ declare namespace Cypress {
 		getByName(name: string): Chainable<JQuery<HTMLElement>>;
 
 		/**
-		 * Custom command to sign in a user.
-		 * @example cy.signIn('username', 'password')
+		 * Custom command to sign in a user via UI.
+		 * @example cy.loginViaUI('username', 'password')
 		 */
 		loginViaUI(username: string, password: string): Chainable<Element>;
+
+		/**
+		 * Custom command to authenticate a user via API.
+		 * @example cy.loginViaAPI('username', 'password')
+		 */
+		loginViaAPI(username: string, password: string): Chainable<Cypress.Response<unknown>>;
 	}
 }

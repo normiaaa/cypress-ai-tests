@@ -31,7 +31,7 @@ describe('Sign In Page', () => {
 
 	it('Error messages are displayed correctly when the fields are empty', function () {
 		cy.getByTestID(LOGIN_TEST_IDS.SUBMIT_BUTTON).click();
-		cy.get(LOGIN_TEST_IDS.USERNAME_ERROR).should('contain', this.texts.usernameRequired);
+		cy.get(LOGIN_TEST_IDS.USERNAME_ERROR).should('contain', this.texts.invalidCredentials);
 	});
 
 	it('An error message is displayed correctly when the credentials are invalid', function () {

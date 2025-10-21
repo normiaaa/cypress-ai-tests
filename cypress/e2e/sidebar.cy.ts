@@ -4,7 +4,7 @@ describe('Sidebar', () => {
 	beforeEach(() => {
 		cy.fixture('sidebarTexts').as('sidebarTexts');
 		cy.visit('/signin');
-		cy.loginViaUI(Cypress.env('username'), Cypress.env('password'));
+		cy.loginViaAPI(Cypress.env('username'), Cypress.env('password'));
 	});
 
 	it('The sidebar is rendered correctly with all elements visible and hrefs verified', function () {
